@@ -1,0 +1,27 @@
+GET http://localhost:3000/api/users
+
+###
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "firstname": "Bertil",
+    "lastname": "Falukorv",
+    "age": 50    
+}
+
+###
+
+PUT http://localhost:3000/api/users/3
+Content-Type: application/json
+
+{
+    "firstname": "David",
+    "lastname": "Jensen",
+    "age": 50    
+}
+
+###
+
+DELETE http://localhost:3000/api/users/2
