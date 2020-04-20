@@ -4,7 +4,7 @@ Detta är en enklare API uppgift där vi använder GET, POST, PUT och DELETE. AP
 
 # Krav för godkänt: 
 
-* **Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
+* Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
 
 * **Samtliga endpoints skall kunna nås via en REST Client fil (.rest)
 
