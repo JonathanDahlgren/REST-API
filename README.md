@@ -2,9 +2,8 @@
 
 Detta är en enklare API uppgift där vi använder GET, POST, PUT och DELETE. APIet innehåller 3 personer, som har ett för, efternamn, ett ID och en ålder.
 
-Ladda ner projektet -> Kör npm init -> kör npm install -> npm install express
+kör npm install -> kör node server.js
 
-Kör node-dev server.js för att starta survern.
 
 # Krav för godkänt: 
 

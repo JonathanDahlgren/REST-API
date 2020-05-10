@@ -46,24 +46,27 @@ app.post("/api/users", (req, res) => {
 
 //PUT
 app.put("/api/users/:id", (req, res) => {
-    users.find((user) => {
-        if (user.id === parseInt(req.params.id)) {
-            user.firstname = req.body.firstname;
-            user.lastname = req.body.lastname;
-            user.age = req.body.age;
-        }
-    })
-    res.send(users)
+
+    const user = users.find((user) => user.id === parseInt(req.params.id))
+    if (!user) {
+        res.status(404).send("Can not find user")
+    } else {
+        user.firstname = req.body.firstname;
+        user.lastname = req.body.lastname;
+        user.age = req.body.age;
+        res.send(user)
+    }   
 })
 
 //DELETE
 app.delete("/api/users/:id", (req, res) => {
     const user = users.find((user) => user.id === parseInt(req.params.id))
+    if (!user) res.status(404).send("Can not find user")
     const index = users.indexOf(user)
 
     users.splice(index, 1)
 
-    res.send(users)
+    res.send(user)
 })
 //"node-dev server.js" to start
 app.listen(3000, () => console.log("Server is running"))
